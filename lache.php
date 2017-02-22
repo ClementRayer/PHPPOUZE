@@ -9,7 +9,7 @@
 <body>
 <section class="lache">
     <section class="text-place">
-        <h1>Tu fais demi-tour et ta propre lâcheté te déçoit</h1>
+        <h1 class="flottement">Tu fais demi-tour et ta propre lâcheté te déçoit</h1>
         <br>
         <a href="index.php">Rééssayer</a>
     </section>

@@ -9,7 +9,7 @@
 <body>
 <section class="start">
     <section class="text-place">
-        <h1>Choisis ton personnage :</h1>
+        <h1 class="flottement">Choisis ton personnage :</h1class>
         <br>
     </section>
 

@@ -25,6 +25,13 @@ body {
     animation-direction: alternate !important;
   }
 
+  .flottement{
+    animation-name: flot;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate !important;
+  }
+
   .text-place {
     padding-top: 10vh;
 
@@ -67,5 +74,19 @@ body {
   }
   to {
     opacity: 1;
+  }
+}
+
+@keyframes flot {
+  from {
+    transform: translate3d(0,0,0);
+  }
+
+  50%{
+    transform: translate3d(-20px,29px,0);
+  }
+
+  to {
+    transform: translate3d(20px,23px,0);
   }
 }
