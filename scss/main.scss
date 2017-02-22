@@ -18,6 +18,20 @@ body {
     background-size: cover;
   }
 
+  .dungeon1 {
+    width: 100%;
+    height: 100vh;
+    background: url(../img/dungeon1-bg.jpg) no-repeat fixed;
+    background-size: cover;
+  }
+
+  .dungeon2 {
+    width: 100%;
+    height: 100vh;
+    background: url(../img/dungeon2-bg.jpg) no-repeat fixed;
+    background-size: cover;
+  }
+
   .clignotement {
     animation-name: fadeIn;
     animation-duration: 0.7s;
