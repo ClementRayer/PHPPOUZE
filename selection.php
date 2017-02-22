@@ -8,11 +8,9 @@
 
 <body>
 <section class="text-place">
-    <h1>Es-tu prêt à entrer dans le donjon ?</h1>
+    <h1>Choisis ton personnage:</h1>
     <br>
-    <a href="selection.php">Oui</a>
-    <br><br>
-    <a href="lache.php">Non</a>
+
 </section>
 </body>
 </html>
