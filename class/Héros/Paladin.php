@@ -7,5 +7,3 @@ class Paladin extends Characters
         parent::__construct($inputName, '40', '30', '30', '100', $item);
     }
 }
-
-?>

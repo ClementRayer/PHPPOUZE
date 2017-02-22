@@ -6,5 +6,3 @@ class Warrior extends Characters {
         parent::__construct($inputName, '50', '0', '50', '100', $item);
     }
 }
-
-?>
