@@ -1,5 +1,9 @@
 <?php
 
-class Game{
-
+class Game
+{
+    public function newGame()
+    {
+        require_once 'characters.php';
+    }
 }

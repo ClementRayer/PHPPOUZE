@@ -1,6 +1,7 @@
 <?php
 
-class Characters extends Game{
+class Characters
+{
     public $name;
     public $atk;
     public $magic;
@@ -8,7 +9,8 @@ class Characters extends Game{
     public $life;
     public $stuff;
 
-    public function __construct(array $stats) {
+    public function __construct(array $stats)
+    {
         new $this->$name;
         new $this->$atk;
         new $this->$magic;
