@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Caveat+Brush");
+@import url("https://fonts.googleapis.com/css?family=Berkshire+Swash");
 body {
   background: url(../img/dungon1-bg.jpg) no-repeat fixed;
   background-size: cover;
@@ -10,13 +10,13 @@ body .text-place {
 }
 
 body .text-place h1 {
-  font-family: 'Caveat Brush', cursive;
+  font-family: 'Berkshire Swash', cursive;
   color: #ff452a;
   font-size: 45px;
 }
 
 body .text-place a {
-  font-family: 'Caveat Brush', cursive;
+  font-family: 'Berkshire Swash', cursive;
   color: #ff452a;
   text-decoration: none;
   font-size: 40px;
