@@ -18,6 +18,13 @@ body .lache {
   background-size: cover;
 }
 
+body .clignotement {
+  animation-name: fadeIn;
+  animation-duration: 0.7s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate !important;
+}
+
 body .text-place {
   padding-top: 10vh;
 }
@@ -37,7 +44,6 @@ body .text-place a {
 
 body .text-place a:hover {
   color: #fffb46;
-  letter-spacing: 0.1em;
 }
 
 body .inline-block {
@@ -58,4 +64,13 @@ body .hero #warrior {
 
 body .hero #paladin {
   width: 300px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

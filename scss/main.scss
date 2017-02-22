@@ -18,6 +18,13 @@ body {
     background-size: cover;
   }
 
+  .clignotement {
+    animation-name: fadeIn;
+    animation-duration: 0.7s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate !important;
+  }
+
   .text-place {
     padding-top: 10vh;
 
@@ -34,23 +41,31 @@ body {
       font-size: 40px;
       &:hover {
         color: #fffb46;
-        letter-spacing: 0.1em;
       }
     }
   }
-  .inline-block{
+  .inline-block {
     display: inline-block;
   }
   .hero {
     width: 30%;
     img {
-      width:200px;
+      width: 200px;
     }
-    #warrior{
-      width:270px;
+    #warrior {
+      width: 270px;
     }
-    #paladin{
-      width:300px;
+    #paladin {
+      width: 300px;
     }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }

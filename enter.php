@@ -9,9 +9,11 @@
 <body>
 <section class="start">
     <section class="text-place">
-        <img src="./img/logo.png" alt="logo">
+        <h1>Es-tu prêt à entrer dans le donjon ?</h1>
+        <br>
+        <a href="selection.php">Oui</a>
         <br><br>
-        <a class="clignotement" href="enter.php">Start</a>
+        <a href="lache.php">Non</a>
     </section>
 </section>
 
