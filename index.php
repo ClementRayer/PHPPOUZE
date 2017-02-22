@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="css/main.css">
-    <title>Dungeon Raider</title>
+    <title>Le plus sombre des Donjons</title>
 </head>
 
 <body>

@@ -4,38 +4,54 @@ body {
   text-align: center;
 }
 
-.start {
+body .start {
   width: 100%;
   height: 100vh;
   background: url(../img/dungeonstart-bg.png) no-repeat fixed;
   background-size: cover;
 }
 
-.lache {
+body .lache {
   width: 100%;
   height: 100vh;
   background: url(../img/dungeonfail.png) no-repeat fixed;
   background-size: cover;
 }
 
-.text-place {
-  padding-top: 20vh;
+body .text-place {
+  padding-top: 10vh;
 }
 
-.text-place h1 {
+body .text-place h1 {
   font-family: 'Berkshire Swash', cursive;
   color: #ff452a;
   font-size: 45px;
 }
 
-.text-place a {
+body .text-place a {
   font-family: 'Berkshire Swash', cursive;
   color: #ff452a;
   text-decoration: none;
   font-size: 40px;
 }
 
-.text-place a:hover {
+body .text-place a:hover {
   color: #fffb46;
   letter-spacing: 0.1em;
+}
+
+body .inline-block {
+  display: inline-block;
+}
+
+body .hero {
+  width: 30%;
+}
+
+body .hero img {
+  width: 200px;
+}
+
+body .hero #warrior {
+  width: 270px;
 }

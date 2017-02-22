@@ -3,14 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="css/main.css">
-    <title>Dungeon Raider</title>
+    <title>Le plus sombre des Donjons</title>
 </head>
 
 <body>
-<section class="text-place">
-    <h1>Choisis ton personnage:</h1>
-    <br>
+<section class="start">
+    <section class="text-place">
+        <h1>Choisis ton personnage :</h1>
+        <br>
+    </section>
 
-</section>
+    <div class="hero inline-block">
+        <img src="img/hero-paladin.png" alt="paladin">
+    </div>
+    <div class="hero inline-block">
+        <img id="warrior" src="img/hero-warrior.png" alt="warrior">
+    </div>
+    <div class="hero inline-block">
+        <img src="img/hero-wizard.png" alt="wizard">
+    </div>
+
 </body>
 </html>
