@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css?family=Caveat+Brush');
+
+body {
+  background: url(../img/dungon1-bg.jpg) no-repeat fixed;
+  background-size: cover;
+  text-align: center;
+
+  .text-place {
+    padding-top: 20vh;
+
+    h1 {
+      font-family: 'Caveat Brush', cursive;
+      color: #ff452a;
+      font-size: 45px;
+    }
+
+    a {
+      font-family: 'Caveat Brush', cursive;
+      color: #ff452a;
+      text-decoration: none;
+      font-size: 40px;
+      &:hover{
+        color: #fffb46;
+        letter-spacing: 0.1em;
+      }
+    }
+  }
+}

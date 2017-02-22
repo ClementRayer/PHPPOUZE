@@ -3,16 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="css/main.css">
-    <title>Dungeon Raider</title>
+    <title>Le plus sombre des Donjons</title>
 </head>
 
 <body>
 <section class="text-place">
-    <h1>Es-tu prêt à entrer dans le donjon ?</h1>
+    <h1>Tu fais demi-tour et ta propre lâcheté te déçoit</h1>
     <br>
-    <a href="#">Oui</a>
-    <br><br>
-    <a href="lache.php">Non</a>
+    <a href="index.php">Rééssayer</a>
 </section>
 </body>
 </html>
