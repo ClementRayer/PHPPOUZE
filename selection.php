@@ -8,7 +8,7 @@
 
 <body>
 <section class="text-place">
-    <h1>Choisis ton personnage:</h1>
+    <h1>Choisis ton personnage :</h1>
     <br>
 
 </section>
