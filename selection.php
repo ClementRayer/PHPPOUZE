@@ -14,13 +14,13 @@
     </section>
 
     <div class="hero inline-block">
-        <img src="img/hero-paladin.png" alt="paladin">
-    </div>
-    <div class="hero inline-block">
         <img id="warrior" src="img/hero-warrior.png" alt="warrior">
     </div>
     <div class="hero inline-block">
         <img src="img/hero-wizard.png" alt="wizard">
+    </div>
+    <div class="hero inline-block">
+        <img id="paladin" src="img/hero-paladin.png" alt="paladin">
     </div>
 
 </body>

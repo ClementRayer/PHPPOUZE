@@ -55,3 +55,7 @@ body .hero img {
 body .hero #warrior {
   width: 270px;
 }
+
+body .hero #paladin {
+  width: 300px;
+}
