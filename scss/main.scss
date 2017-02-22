@@ -3,6 +3,9 @@
 body {
   background-color: #000000;
   text-align: center;
+  font-family: 'Berkshire Swash', cursive;
+  color: #ff452a;
+  font-size: 19px;
 
   .start {
     width: 100%;
@@ -39,7 +42,7 @@ body {
     animation-direction: alternate !important;
   }
 
-  .flottement{
+  .flottement {
     animation-name: flot;
     animation-duration: 10s;
     animation-iteration-count: infinite;
@@ -47,12 +50,29 @@ body {
   }
 
   .text-place {
-    padding-top: 10vh;
+    padding-top: 1vh;
 
     h1 {
       font-family: 'Berkshire Swash', cursive;
       color: #ff452a;
       font-size: 45px;
+    }
+
+    input {
+      font-size:20px;
+      padding-left: 30px;
+      padding-right: 30px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      font-family: 'Berkshire Swash', cursive;
+      color: #ff452a;
+      border-radius: 30px;
+      background-color: #0b0b0b;
+      border:none;
+    }
+
+    input:focus{
+      outline: none;
     }
 
     a {
@@ -79,7 +99,7 @@ body {
     #paladin {
       width: 300px;
     }
-    .chara{
+    .chara {
       font-family: 'Berkshire Swash', cursive;
       font-size: 30px;
       color: #ff452a;
@@ -99,14 +119,14 @@ body {
 
 @keyframes flot {
   from {
-    transform: translate3d(0,0,0);
+    transform: translate3d(0, 0, 0);
   }
 
-  50%{
-    transform: translate3d(-20px,29px,0);
+  50% {
+    transform: translate3d(-20px, 29px, 0);
   }
 
   to {
-    transform: translate3d(20px,23px,0);
+    transform: translate3d(20px, 23px, 0);
   }
 }

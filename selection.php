@@ -9,8 +9,12 @@
 <body>
 <section class="start">
     <section class="text-place">
-        <h1 class="flottement">Choisis ton personnage :</h1class>
-        <br>
+        <h1 class="flottement">Choisis ton personnage :</h1>
+            <br>
+        <form action="#">
+            <input type="text" placeholder="Ton nom, aventurier !" name="inputname">
+            <input type="submit" value="Envoyer">
+        </form>
     </section>
 
     <div class="hero inline-block">

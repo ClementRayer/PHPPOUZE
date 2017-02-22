@@ -1,68 +1,18 @@
 @import url("https://fonts.googleapis.com/css?family=Berkshire+Swash");
 body {
   background-color: #000000;
-  text-align: center; }
-  body .start {
-    width: 100%;
-    height: 100vh;
-    background: url(../img/dungeonstart-bg.png) no-repeat fixed;
-    background-size: cover; }
-  body .lache {
-    width: 100%;
-    height: 100vh;
-    background: url(../img/dungeonfail.png) no-repeat fixed;
-    background-size: cover; }
-  body .clignotement {
-    -webkit-animation-name: fadeIn;
-    animation-name: fadeIn;
-    -webkit-animation-duration: 0.7s;
-    animation-duration: 0.7s;
-    -webkit-animation-iteration-count: infinite;
-    animation-iteration-count: infinite;
-    -webkit-animation-direction: alternate !important;
-    animation-direction: alternate !important; }
-  body .flottement {
-    -webkit-animation-name: flot;
-    animation-name: flot;
-    -webkit-animation-duration: 10s;
-    animation-duration: 10s;
-    -webkit-animation-iteration-count: infinite;
-    animation-iteration-count: infinite;
-    -webkit-animation-direction: alternate !important;
-    animation-direction: alternate !important; }
-  body .text-place {
-    padding-top: 10vh; }
-    body .text-place h1 {
-      font-family: 'Berkshire Swash', cursive;
-      color: #ff452a;
-      font-size: 45px; }
-    body .text-place a {
-      font-family: 'Berkshire Swash', cursive;
-      color: #ff452a;
-      text-decoration: none;
-      font-size: 40px; }
-      body .text-place a:hover {
-        color: #fffb46; }
-  body .inline-block {
-    display: inline-block; }
-  body .hero {
-    width: 30%; }
-    body .hero img {
-      width: 200px; }
-    body .hero #warrior {
-      width: 270px; }
-    body .hero #paladin {
-      width: 300px; }
-    body .hero .chara {
-      font-family: 'Berkshire Swash', cursive;
-      font-size: 30px;
-      color: #ff452a; }
+  text-align: center;
+  font-family: 'Berkshire Swash', cursive;
+  color: #ff452a;
+  font-size: 19px;
+}
 
-@-webkit-keyframes fadeIn {
-  from {
-    opacity: 0; }
-  to {
-    opacity: 1; } }
+body .start {
+  width: 100%;
+  height: 100vh;
+  background: url(../img/dungeonstart-bg.png) no-repeat fixed;
+  background-size: cover;
+}
 
 body .lache {
   width: 100%;
@@ -100,13 +50,30 @@ body .flottement {
 }
 
 body .text-place {
-  padding-top: 10vh;
+  padding-top: 1vh;
 }
 
 body .text-place h1 {
   font-family: 'Berkshire Swash', cursive;
   color: #ff452a;
   font-size: 45px;
+}
+
+body .text-place input {
+  font-size: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: 'Berkshire Swash', cursive;
+  color: #ff452a;
+  border-radius: 30px;
+  background-color: #0b0b0b;
+  border: none;
+}
+
+body .text-place input:focus {
+  outline: none;
 }
 
 body .text-place a {
@@ -140,30 +107,29 @@ body .hero #paladin {
   width: 300px;
 }
 
+body .hero .chara {
+  font-family: 'Berkshire Swash', cursive;
+  font-size: 30px;
+  color: #ff452a;
+}
+
 @keyframes fadeIn {
   from {
-    opacity: 0; }
+    opacity: 0;
+  }
   to {
-    opacity: 1; } }
-
-@-webkit-keyframes flot {
-  from {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0); }
-  50% {
-    -webkit-transform: translate3d(-20px, 29px, 0);
-    transform: translate3d(-20px, 29px, 0); }
-  to {
-    -webkit-transform: translate3d(20px, 23px, 0);
-    transform: translate3d(20px, 23px, 0); } }
+    opacity: 1;
+  }
+}
 
 @keyframes flot {
   from {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0); }
+    transform: translate3d(0, 0, 0);
+  }
   50% {
-    -webkit-transform: translate3d(-20px, 29px, 0);
-    transform: translate3d(-20px, 29px, 0); }
+    transform: translate3d(-20px, 29px, 0);
+  }
   to {
-    -webkit-transform: translate3d(20px, 23px, 0);
-    transform: translate3d(20px, 23px, 0); } }
+    transform: translate3d(20px, 23px, 0);
+  }
+}
