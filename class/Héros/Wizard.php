@@ -3,6 +3,13 @@
 class Wizard extends Characters {
     public function __set($stats, $value)
     {
-        parent::__construct($inputName, '0', '70', '30', '100', $item);
+        parent::__construct($stats){
+        $this->name = $inputName;
+        $this->atk = 0;
+        $this->magic = 70;
+        $this->def = 30;
+        $this->life = 100;
+        $this->stuff = $item;
+        }
     }
 }
