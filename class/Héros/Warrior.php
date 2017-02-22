@@ -3,6 +3,12 @@
 class Warrior extends Characters {
     public function __set($stats, $value)
     {
-        parent::__construct($inputName, '50', '0', '50', '100', $item);
+        parent::__construct($stats){
+        $this->name = $inputName;
+        $this->atk = 50;
+        $this->magic = 0;
+        $this->def = 50;
+        $this->life = 100;
+        $this->stuff = $item;
     }
 }
