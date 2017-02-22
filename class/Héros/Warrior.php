@@ -1,12 +1,9 @@
 <?php
 
-class Warrior extends Characters
-{
-    public $warriorAtk->$atk;
-
-    public function attack($target)
+class Warrior extends Characters {
+    public function __set($stats, $value)
     {
-        $target->takeDamage($this->$atk);
+        parent::__construct($inputName, '50', '0', '50', '100', $item);
     }
 }
 

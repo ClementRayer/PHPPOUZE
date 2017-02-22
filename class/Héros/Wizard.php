@@ -1,13 +1,8 @@
 <?php
 
-class Wizard extends Characters
-{
-    public $paladinMagic->$magic;
-
-    public function castSpell($target)
+class Wizard extends Characters {
+    public function __set($stats, $value)
     {
-        $target->takeDamage($this->$magic);
+        parent::__construct($inputName, '0', '70', '30', '100', $item);
     }
 }
-
-?>

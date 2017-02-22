@@ -2,16 +2,9 @@
 
 class Paladin extends Characters
 {
-    public $paladinAtk->$atk;
-    public $paladinMagic->$magic;
-
-    public function attack($target)
+    public function __set($stats, $value)
     {
-        $target->takeDamage($this->$atk);
-    }
-    public function castSpell($target)
-    {
-        $target->takeDamage($this->$magic);
+        parent::__construct($inputName, '40', '30', '30', '100', $item);
     }
 }
 
