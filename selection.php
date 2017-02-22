@@ -1,3 +1,9 @@
+<?php
+
+session_start();
+
+?>
+
 <!doctype html>
 <html lang="fr">
 <head>
@@ -26,9 +32,8 @@
         <p class="chara">Magicien</p>
     </div>
     <div class="hero inline-block">
-        <img id="paladin" src="img/hero-paladin.png" alt="paladin">
+        <a href="#"><img id="paladin" src="img/hero-paladin.png" alt="paladin"></a>
         <p class="chara">Paladin</p>
     </div>
-
 </body>
 </html>
