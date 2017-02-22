@@ -1,6 +1,6 @@
 <?php
 
-class Characters extends Game
+class Characters
 {
     public $name;
     public $atk;

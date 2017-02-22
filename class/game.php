@@ -1,10 +1,9 @@
 <?php
 
-class Game{
-
-    private $isLaunched = false;
-
-    public function newGame(){
-        $this->isLaunched = true;
+class Game
+{
+    public function newGame()
+    {
+        require_once 'characters.php';
     }
 }
