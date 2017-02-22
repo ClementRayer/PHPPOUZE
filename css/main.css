@@ -1,28 +1,41 @@
 @import url("https://fonts.googleapis.com/css?family=Berkshire+Swash");
 body {
-  background: url(../img/dungon1-bg.jpg) no-repeat fixed;
-  background-size: cover;
+  background-color: #000000;
   text-align: center;
 }
 
-body .text-place {
+.start {
+  width: 100%;
+  height: 100vh;
+  background: url(../img/dungeonstart-bg.png) no-repeat fixed;
+  background-size: cover;
+}
+
+.lache {
+  width: 100%;
+  height: 100vh;
+  background: url(../img/dungeonfail.png) no-repeat fixed;
+  background-size: cover;
+}
+
+.text-place {
   padding-top: 20vh;
 }
 
-body .text-place h1 {
+.text-place h1 {
   font-family: 'Berkshire Swash', cursive;
   color: #ff452a;
   font-size: 45px;
 }
 
-body .text-place a {
+.text-place a {
   font-family: 'Berkshire Swash', cursive;
   color: #ff452a;
   text-decoration: none;
   font-size: 40px;
 }
 
-body .text-place a:hover {
+.text-place a:hover {
   color: #fffb46;
   letter-spacing: 0.1em;
 }
