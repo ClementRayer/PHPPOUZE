@@ -1,16 +1,15 @@
 <?php
 
-class Characters
+class Character
 {
     public $stats = array();
 
-    public function __construct(array $stats)
+    public function __construct($inputname, $atk, $magic, $def, $life)
     {
-        new $this->$name;
-        new $this->$atk;
-        new $this->$magic;
-        new $this->$def;
-        new $this->$life;
-        new $this->$stuff;
+        $this->$inputname;
+        $this->$atk;
+        $this->$magic;
+        $this->$def;
+        $this->$life;
     }
 }

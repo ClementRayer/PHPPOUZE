@@ -1,6 +1,6 @@
 <?php
 
-class Gobelin extends Characters
+class Gobelin extends Character
 {
     public function __construct($stats, $value)
     {

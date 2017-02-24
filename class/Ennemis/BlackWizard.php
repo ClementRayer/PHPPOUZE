@@ -1,6 +1,6 @@
 <?php
 
-class BlackWizard extends Characters
+class BlackWizard extends Character
 {
     public function __construct($stats, $value)
     {

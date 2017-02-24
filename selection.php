@@ -17,7 +17,7 @@ session_start();
     <section class="text-place">
         <h1 class="flottement">Choisis ton personnage :</h1>
         <br>
-        <form action="dungeon.php">
+        <form method="post" action="dungeon.php">
             <input type="text" placeholder="Ton nom, aventurier !" name="inputname"><br><br>
             <label>
                 <input type="checkbox" class="radio" value="0" name="classe"/>Guerrier&nbsp;</label>
@@ -25,6 +25,7 @@ session_start();
                 <input type="checkbox" class="radio" value="1" name="classe"/>&nbsp;Magicien&nbsp;</label>
             <label>
                 <input type="checkbox" class="radio" value="2" name="classe"/>&nbsp;Paladin</label><br><br>
+                <input type="hidden" name="etat" value="personnage">
             <input type="submit" value="Envoyer">
         </form>
     </section>

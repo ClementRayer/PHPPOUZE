@@ -1,6 +1,6 @@
 <?php
 
-class Dragon extends Characters
+class Dragon extends Character
 {
     public function __construct($stats, $value)
     {

@@ -1,15 +1,9 @@
 <?php
 
-class Wizard extends Characters {
-    public function __construct($stats, $value)
+class Wizard extends Character{
+
+    public function __construct($inputname)
     {
-        parent::__construct($stats){
-        $this->name = $inputName;
-        $this->atk = 0;
-        $this->magic = 70;
-        $this->def = 30;
-        $this->life = 100;
-        $this->stuff = $item;
-        }
+        parent::__construct($inputname, 0, 70, 30, 100);
     }
 }

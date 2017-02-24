@@ -1,28 +1,30 @@
 <?php
 
 session_start();
+error_reporting(E_ALL);
+ini_set("display_errors", 1);
 
-if (isset($_SESSION['game']))
-    $game = unserialize($_SESSION['game']);
-else
+require_once 'class/game.php';
+
+if ($_POST['etat'] == "personnage") {
+
     $game = new Game();
 
     $inputname = $_POST['inputname'];
     $classe_joueur = $_POST['classe'];
 
-    if ($classe_joueur == 0) {
-        new Warrior($inputname);
-    }
+    $game->newCharacter($classe_joueur, $inputname);
 
-    if ($classe_joueur == 1) {
-        new Wizard($inputname);
-    }
+    $_SESSION['game'] = serialize($game);
+}
 
-    if ($classe_joueur == 2) {
-        new Paladin($inputname);
-    }
+elseif (isset($_SESSION['game'])){
+    $game = unserialize($_SESSION['game']);
+}
 
-$_SESSION['game'] = serialize($game);
+else{
+    header('Location:index.php');
+}
 
 ?>
 
@@ -49,6 +51,9 @@ $_SESSION['game'] = serialize($game);
     }
     ?>
     <section class="text-place">
+        <?php
+            echo ;
+        ?>
     </section>
     </section>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
