@@ -1,13 +1,5 @@
 <?php
 
-class Gobelin extends Character
-{
-    public function __construct($stats, $value)
-    {
-        parent::__construct($stats){
-        $this->name = "Gobelin Taquin";
-        $this->atk = 17;
-        $this->def = 13;
-        $this->life = 30;
-    }
-    }
+class Gobelin extends Character{
+    /*function __construct("Gobelin", 17, 0, 13, 100, "./img/ennemy-gobelin.png");*/
+}

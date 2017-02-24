@@ -1,13 +1,5 @@
 <?php
 
-class BlackWizard extends Character
-{
-    public function __construct($stats, $value)
-    {
-        parent::__construct($stats){
-        $this->name = "Magicien Noir";
-        $this->atk = 25;
-        $this->def = 25;
-        $this->life = 80;
-    }
-    }
+class BlackWizard extends Character{
+    /*function __construct("Magicien Noir", 25, 0, 25, 100, "./img/ennemy-blackwizard.png");*/
+}

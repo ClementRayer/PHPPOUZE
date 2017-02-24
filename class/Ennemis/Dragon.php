@@ -1,13 +1,5 @@
 <?php
 
-class Dragon extends Character
-{
-    public function __construct($stats, $value)
-    {
-        parent::__construct($stats){
-        $this->name = "Dragon";
-        $this->atk = 30;
-        $this->def = 40;
-        $this->life = 160;
-    }
-    }
+class Dragon extends Character{
+    /*function __construct("Dragon", 30, 0, 40, 100, "./img/ennemy-dragon.png");*/
+}

@@ -50,6 +50,7 @@ else{
     <?php
     }
     ?>
+        <h1>Vous entrez dans la salle n°<?php ?></h1>
         <section class="img-hero">
             <h2 class="chara"><?php echo $game->getCharacter()->getInputName();?></h2>
             <img id="hero" src="<?php echo $game->getCharacter()->getInputImage(); ?>" alt="hero">

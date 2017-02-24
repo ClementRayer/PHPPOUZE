@@ -1,9 +1,13 @@
 <?php
-
 require_once 'Character.php';
+require_once 'Coffre.php';
+require_once 'Salle.php';
 require_once 'Héros/Warrior.php';
 require_once 'Héros/Wizard.php';
 require_once 'Héros/Paladin.php';
+require_once 'Ennemis/Dragon.php';
+require_once 'Ennemis/BlackWizard.php';
+require_once 'Ennemis/Gobelin.php';
 
 class Game
 {
@@ -27,4 +31,6 @@ class Game
     public function getCharacter(){
         return $this->character;
     }
+
+    p
 }
