@@ -56,6 +56,15 @@ else{
             <img id="hero" src="<?php echo $game->getCharacter()->getInputImage(); ?>" alt="hero">
             <h3><?php echo $game->getCharacter()->getInputLife();?></h3>
         </section>
+        <section class="options">
+            <ul>
+                <li>Observer</li>
+                <li>Passer la porte</li>
+                <li>Ouvrir le coffre</li>
+                <li>Attaquer <?php ?></li>
+                <li>Fuir</li>
+            </ul>
+        </section>
     </section>
 
     <form method="post" action="index.php">
