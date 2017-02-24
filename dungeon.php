@@ -2,20 +2,28 @@
 
 session_start();
 
-$inputname = $_POST['inputname'];
-$classe_joueur = $_POST['classe'];
+if (isset($_SESSION['game']))
+    $game = unserialize($_SESSION['game']);
+else
+    $game = new Game();
 
-if ($classe_joueur == 0) {
-    new Warrior($inputname);
-}
+    $inputname = $_POST['inputname'];
+    $classe_joueur = $_POST['classe'];
 
-if ($classe_joueur == 1) {
-    new Wizard($inputname);
-}
+    if ($classe_joueur == 0) {
+        new Warrior($inputname);
+    }
 
-if ($classe_joueur == 2) {
-    new Paladin($inputname);
-}
+    if ($classe_joueur == 1) {
+        new Wizard($inputname);
+    }
+
+    if ($classe_joueur == 2) {
+        new Paladin($inputname);
+    }
+
+$_SESSION['game'] = serialize($game);
+
 ?>
 
 <!doctype html>
@@ -29,7 +37,6 @@ if ($classe_joueur == 2) {
 <body>
 <?php
     $rand = rand(1, 2);
-    echo $rand;
     if ($rand == 1){
 ?>
 <section class="dungeon1">

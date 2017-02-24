@@ -2,13 +2,6 @@
 
 session_start();
 
-/*if (isset($_SESSION['game']))
-    $game = unserialize($_SESSION['game']);
-else
-    $game = new Game();
-
-$_SESSION['game'] = serialize($game);*/
-
 ?>
 
 <!doctype html>
