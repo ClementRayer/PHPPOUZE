@@ -31,6 +31,4 @@ class Game
     public function getCharacter(){
         return $this->character;
     }
-
-    p
 }
