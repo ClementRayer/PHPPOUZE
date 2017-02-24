@@ -2,7 +2,7 @@
 
 session_start();
 
-if(isset($_SESSION['game']))
+if (isset($_SESSION['game']))
     $game = unserialize($_SESSION['game']);
 else
     $game = new Game();
@@ -20,23 +20,24 @@ $_SESSION['game'] = serialize($game);
 </head>
 
 <body>
+<?php
+$rand = rand(1, 2);
+echo $rand;
+if ($rand == 1){
+?>
+<section class="dungeon1">
     <?php
-        $rand = rand(1, 2);
-        echo $rand;
-        if($rand == 1){
-    ?>
-    <section class="dungeon1">
-    <?php
-        }
-        else{
+    }
+    else{
     ?>
     <section class="dungeon2">
-    <?php
+        <?php
         }
-    ?>
+        ?>
         <section class="text-place">
         </section>
     </section>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 </html>
