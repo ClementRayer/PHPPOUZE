@@ -1,13 +1,8 @@
 <?php
 
-class Character
+class Characters
 {
-    public $name;
-    public $atk;
-    public $magic;
-    public $def;
-    public $life;
-    public $stuff;
+    public $stats = array();
 
     public function __construct(array $stats)
     {

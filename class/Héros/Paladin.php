@@ -2,7 +2,7 @@
 
 class Paladin extends Characters
 {
-    public function __set($stats, $value)
+    public function __construct(array $stats)
     {
         parent::__construct($stats){
         $this->name = $inputName;

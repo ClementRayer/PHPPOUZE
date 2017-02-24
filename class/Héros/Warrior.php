@@ -1,7 +1,7 @@
 <?php
 
 class Warrior extends Characters {
-    public function __set($stats, $value)
+    public function __construct($stats, $value)
     {
         parent::__construct($stats){
         $this->name = $inputName;
