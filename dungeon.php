@@ -50,13 +50,18 @@ else{
     <?php
     }
     ?>
-        <h1>Vous entrez dans la salle n°<?php ?></h1>
+        <h1>Vous entrez dans la salle n°<?php ?>></h1>
         <section class="img-hero">
             <h2 class="chara"><?php echo $game->getCharacter()->getInputName();?></h2>
             <img id="hero" src="<?php echo $game->getCharacter()->getInputImage(); ?>" alt="hero">
             <h3><?php echo $game->getCharacter()->getInputLife();?></h3>
         </section>
     </section>
+
+    <form method="post" action="index.php">
+        <input type="hidden" name="etat" value="quitter">
+        <input type="submit" value="Quitter la session">
+    </form>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="./js/main.js"></script>
 </body>

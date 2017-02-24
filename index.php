@@ -1,6 +1,12 @@
 <?php
 
-session_destroy();
+if ($_POST['etat'] == "quitter") {
+    session_destroy();
+}
+
+else{
+    session_start();
+}
 
 ?>
 

@@ -59,23 +59,6 @@ body .text-place h1 {
   font-size: 45px;
 }
 
-body .text-place input {
-  font-size: 20px;
-  padding-left: 30px;
-  padding-right: 30px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  font-family: 'Berkshire Swash', cursive;
-  color: #ff452a;
-  border-radius: 30px;
-  background-color: #0b0b0b;
-  border: none;
-}
-
-body .text-place input:focus {
-  outline: none;
-}
-
 body .text-place a {
   font-family: 'Berkshire Swash', cursive;
   color: #ff452a;
@@ -142,4 +125,21 @@ body .hero .chara {
 
 .img-hero img {
   max-width: 250px;
+}
+
+input {
+  font-size: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-family: 'Berkshire Swash', cursive;
+  color: #ff452a;
+  border-radius: 30px;
+  background-color: #0b0b0b;
+  border: none;
+}
+
+input:focus {
+  outline: none;
 }

@@ -12,6 +12,7 @@ require_once 'Ennemis/Gobelin.php';
 class Game
 {
     private $character;
+    private $number;
 
     public function newCharacter($classe_joueur, $inputname){
 
@@ -32,5 +33,8 @@ class Game
         return $this->character;
     }
 
-    p
+    public function getNumber(){
+        return $this->number;
+    }
+
 }
