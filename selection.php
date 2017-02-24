@@ -2,6 +2,13 @@
 
 session_start();
 
+/*if (isset($_SESSION['game']))
+    $game = unserialize($_SESSION['game']);
+else
+    $game = new Game();
+
+$_SESSION['game'] = serialize($game);*/
+
 ?>
 
 <!doctype html>
@@ -17,14 +24,14 @@ session_start();
     <section class="text-place">
         <h1 class="flottement">Choisis ton personnage :</h1>
         <br>
-        <form action="#">
+        <form action="dungeon.php">
             <input type="text" placeholder="Ton nom, aventurier !" name="inputname"><br><br>
             <label>
-                <input type="checkbox" class="radio" value="0" name="fooby[1][]"/>Guerrier&nbsp;</label>
+                <input type="checkbox" class="radio" value="0" name="classe"/>Guerrier&nbsp;</label>
             <label>
-                <input type="checkbox" class="radio" value="1" name="fooby[1][]"/>&nbsp;Magicien&nbsp;</label>
+                <input type="checkbox" class="radio" value="1" name="classe"/>&nbsp;Magicien&nbsp;</label>
             <label>
-                <input type="checkbox" class="radio" value="2" name="fooby[1][]"/>&nbsp;Paladin</label><br><br>
+                <input type="checkbox" class="radio" value="2" name="classe"/>&nbsp;Paladin</label><br><br>
             <input type="submit" value="Envoyer">
         </form>
     </section>

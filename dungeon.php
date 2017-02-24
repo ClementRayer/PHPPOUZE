@@ -2,13 +2,20 @@
 
 session_start();
 
-if (isset($_SESSION['game']))
-    $game = unserialize($_SESSION['game']);
-else
-    $game = new Game();
+$inputname = $_POST['inputname'];
+$classe_joueur = $_POST['classe'];
 
-$_SESSION['game'] = serialize($game);
+if ($classe_joueur == 0) {
+    new Warrior($inputname);
+}
 
+if ($classe_joueur == 1) {
+    new Wizard($inputname);
+}
+
+if ($classe_joueur == 2) {
+    new Paladin($inputname);
+}
 ?>
 
 <!doctype html>
@@ -21,21 +28,21 @@ $_SESSION['game'] = serialize($game);
 
 <body>
 <?php
-$rand = rand(1, 2);
-echo $rand;
-if ($rand == 1){
+    $rand = rand(1, 2);
+    echo $rand;
+    if ($rand == 1){
 ?>
 <section class="dungeon1">
     <?php
     }
     else{
     ?>
-    <section class="dungeon2">
-        <?php
-        }
-        ?>
-        <section class="text-place">
-        </section>
+<section class="dungeon2">
+    <?php
+    }
+    ?>
+    <section class="text-place">
+    </section>
     </section>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="./js/main.js"></script>

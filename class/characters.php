@@ -1,6 +1,6 @@
 <?php
 
-class Characters
+class Character
 {
     public $name;
     public $atk;
