@@ -4,7 +4,7 @@ session_start();
 error_reporting(E_ALL);
 ini_set("display_errors", 1);
 
-require_once 'class/game.php';
+require_once 'class/Game.php';
 
 if ($_POST['etat'] == "personnage") {
 
@@ -38,23 +38,23 @@ else{
 
 <body>
 <?php
-    $rand = rand(1, 2);
-    if ($rand == 1){
+    $rand = rand(1, 10);
+    if ($rand <= 5){
 ?>
 <section class="dungeon1">
     <?php
     }
-    else{
+    elseif ($rand <= 10 & $rand > 5){
     ?>
 <section class="dungeon2">
     <?php
     }
     ?>
-    <section class="text-place">
-        <?php
-            echo ;
-        ?>
-    </section>
+        <section class="img-hero">
+            <h2 class="chara"><?php echo $game->getCharacter()->getInputName();?></h2>
+            <img id="hero" src="<?php echo $game->getCharacter()->getInputImage(); ?>" alt="hero">
+            <h3><?php echo $game->getCharacter()->getInputLife();?></h3>
+        </section>
     </section>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="./js/main.js"></script>

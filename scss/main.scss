@@ -35,6 +35,13 @@ body {
     background-size: cover;
   }
 
+  .dungeon-horrible {
+    width: 100%;
+    height: 100vh;
+    background: url(../img/mimimathy-bg.jpeg) no-repeat fixed;
+    background-size: cover;
+  }
+
   .clignotement {
     animation-name: fadeIn;
     animation-duration: 0.7s;
@@ -128,5 +135,14 @@ body {
 
   to {
     transform: translate3d(20px, 23px, 0);
+  }
+}
+
+.img-hero{
+  float: left;
+  padding-left: 200px;
+  padding-top: 50px;
+  img{
+    max-width: 250px;
   }
 }

@@ -1,6 +1,6 @@
 <?php
 
-require_once 'characters.php';
+require_once 'Character.php';
 require_once 'Héros/Warrior.php';
 require_once 'Héros/Wizard.php';
 require_once 'Héros/Paladin.php';

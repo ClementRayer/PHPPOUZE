@@ -30,7 +30,7 @@ session_start();
         </form>
     </section>
 
-    <div class="hero inline-block">
+    <div class="hero inline-block left">
         <img id="warrior" src="img/hero-warrior.png" alt="warrior">
         <p class="chara">Guerrier</p>
     </div>
