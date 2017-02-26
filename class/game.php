@@ -38,10 +38,14 @@ class Game
     }
 
     public function nextNumber($number){
-            $this->number = $number + 1;
+            $this->number = $this->number + 1;
     }
 
     public function getNumber(){
         return $this->number;
+    }
+
+    public function flee(){
+        $this->number = $this->number - 1;
     }
 }

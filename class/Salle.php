@@ -7,23 +7,4 @@ require_once 'Game.php';
 class Salle
 {
 
-    public function observe(){
-
-    }
-
-    public function goForward(){
-
-    }
-
-    public function open(){
-
-    }
-
-    public function attack(){
-
-    }
-
-    public function flee(){
-
-    }
 }

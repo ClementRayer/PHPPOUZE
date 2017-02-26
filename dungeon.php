@@ -34,7 +34,17 @@ if ($_POST['etat'] == false) {
 
             $game = unserialize($_SESSION['game']);
 
-            $game->nextNumber($number);
+            $game->nextNumber();
+            $number = $game->getNumber();
+
+            $_SESSION['game'] = serialize($game);
+            break;
+
+        case "fuir":
+
+            $game = unserialize($_SESSION['game']);
+
+            $game->flee();
             $number = $game->getNumber();
 
             $_SESSION['game'] = serialize($game);
