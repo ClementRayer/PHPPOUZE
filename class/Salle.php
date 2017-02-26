@@ -66,4 +66,5 @@ class Salle
     {
         return $this->coffre;
     }
+
 }
