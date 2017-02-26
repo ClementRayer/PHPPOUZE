@@ -1,15 +1,16 @@
 <?php
 
 session_start();
-error_reporting(E_ALL);
-ini_set("display_errors", 1);
+/*error_reporting(E_ALL);
+ini_set("display_errors", 1);*/
 
 require_once 'class/Game.php';
 require_once 'class/Salle.php';
 
 if ($_POST['etat'] == false) {
 
-    header('Location: index.php');
+    $game = unserialize($_SESSION['game']);
+    $number = unserialize($_SESSION['number']);
 
 } else {
 
@@ -26,15 +27,18 @@ if ($_POST['etat'] == false) {
             $game->newCharacter($classe_joueur, $inputname);
 
             $_SESSION['game'] = serialize($game);
+            $_SESSION['number'] = serialize($number);
             break;
 
         case "next":
-            
+
             $game = unserialize($_SESSION['game']);
-            $number = $game->getNumber();
-            $game->addNumber($number);
+            $number = unserialize($_SESSION['number']);
+
+            $number = $number + 1;
 
             $_SESSION['game'] = serialize($game);
+            $_SESSION['number'] = serialize($number);
             break;
     }
 }
@@ -72,6 +76,9 @@ if ($rand <= 5){
         <form method="post" action="dungeon.php">
             <input type="hidden" name="etat" value="next">
             <input type="submit" value="Suivant">
+        </form>
+        <form method="post" action="stats.php">
+            <input type="submit" value="Statistiques">
         </form>
         <form method="post" action="index.php">
             <input type="hidden" name="etat" value="quitter">

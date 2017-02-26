@@ -23,6 +23,18 @@ class Character
         return $this->inputname;
     }
 
+    public function getInputAtk() {
+        return $this->atk;
+    }
+
+    public function getInputMag() {
+        return $this->magic;
+    }
+
+    public function getInputDef() {
+        return $this->def;
+    }
+
     public function getInputLife() {
         return $this->life;
     }
