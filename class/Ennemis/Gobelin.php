@@ -1,5 +1,9 @@
 <?php
 
-class Gobelin extends Character{
-    /*function __construct("Gobelin", 17, 0, 13, 100, "./img/ennemy-gobelin.png");*/
+class Gobelin extends Character
+{
+    public function __construct($niveau)
+    {
+        parent::__construct("Gobelin", 10, 0, 10, 100, "./img/ennemy-gobelin.png");
+    }
 }
