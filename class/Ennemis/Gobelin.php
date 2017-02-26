@@ -1,6 +1,6 @@
 <?php
 
-class Gobelin extends Character
+class Gobelin extends Ennemi
 {
     public function __construct($niveau)
     {

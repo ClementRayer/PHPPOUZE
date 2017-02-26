@@ -1,6 +1,6 @@
 <?php
 
-class BlackWizard extends Character
+class BlackWizard extends Ennemi
 {
     public function __construct($niveau)
     {

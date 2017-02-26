@@ -1,6 +1,6 @@
 <?php
 
-class Dragon extends Character
+class Dragon extends Ennemi
 {
     public function __construct($niveau)
     {
