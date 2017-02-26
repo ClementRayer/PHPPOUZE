@@ -2,10 +2,9 @@
 
 class Ennemi
 {
-
     private $name;
     private $number;
-    public $life;
+    private $life;
     private $def;
     private $atk;
     private $img;
@@ -25,27 +24,28 @@ class Ennemi
         return $this->name;
     }
 
-    public function getLife(){
+    public function getLife()
+    {
         return $this->life;
     }
 
-    public function getAtk(){
+    public function getAtk()
+    {
         return $this->atk;
     }
 
-    public function getDef(){
+    public function getDef()
+    {
         return $this->def;
     }
 
-    public function getImg(){
+    public function getImg()
+    {
         return $this->img;
     }
 
-    public function morelife($morelife){
-        $this->life += $morelife;
-    }
-
-    public function lesslife($lesslife){
-        $this->life -= $lesslife;
+    public function lessLife($life)
+    {
+        $this->life -= $life;
     }
 }
