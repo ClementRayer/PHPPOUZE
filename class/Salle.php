@@ -6,13 +6,6 @@ require_once 'Game.php';
 
 class Salle
 {
-    private $number;
-
-    public function addNumber($number){
-
-        $number = $number + 1;
-
-    }
 
     public function observe(){
 

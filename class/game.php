@@ -37,4 +37,7 @@ class Game
         return $this->number;
     }
 
+    public function addNumber($number){
+        $number = $number + 1;
+    }
 }
