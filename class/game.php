@@ -13,6 +13,7 @@ class Game
 {
     private $character;
     private $number;
+    private $salle;
 
     public function newCharacter($classe_joueur, $inputname){
 
@@ -35,11 +36,16 @@ class Game
 
     public function initNumber(){
         $this->number = 1;
+        $this->salle = new Salle($this->number);
     }
 
     public function nextNumber(){
         $this->number = $this->number + 1;
         $this->salle = new Salle($this->number);
+    }
+
+    public function getSalle(){
+        return $this->salle;
     }
 
     public function getNumber(){
