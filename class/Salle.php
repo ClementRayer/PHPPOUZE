@@ -52,10 +52,10 @@ class Salle
         return $this->ennemy;
     }
 
-    public function getEvent()
+    /*public function getEvent()
     {
         return $this->event;
-    }
+    }*/
 
     public function setEvent($new)
     {

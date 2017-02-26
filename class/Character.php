@@ -1,5 +1,8 @@
 <?php
 
+require_once 'Character.php';
+require_once 'Game.php';
+
 class Character
 {
     private $inputname;
