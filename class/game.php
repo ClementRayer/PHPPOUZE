@@ -38,7 +38,7 @@ class Game
     }
 
     public function nextNumber($number){
-            $this->number = $number + 1;
+        $this->number = $number + 1;
     }
 
     public function getNumber(){

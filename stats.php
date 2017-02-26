@@ -22,7 +22,7 @@ $game = unserialize($_SESSION['game']);
     <section class="text-place">
         <h1 class="flottement">Statistiques :</h1>
             Nom : <?php echo $game->getCharacter()->getInputName(); ?><br>
-            Vie : <?php echo $game->getCharacter()->getInputLife(); ?><br>
+            Vie : <?php echo $game->getCharacter()->getInputLife(); ?>/100<br>
             Attaque : <?php echo $game->getCharacter()->getInputAtk(); ?><br>
             Defense : <?php echo $game->getCharacter()->getInputDef(); ?><br>
             Magie : <?php echo $game->getCharacter()->getInputMag(); ?><br>
