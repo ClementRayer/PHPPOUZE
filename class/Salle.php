@@ -3,55 +3,53 @@
 require_once 'Character.php';
 require_once 'Game.php';
 require_once "Coffre.php";
+require_once "Ennemy.php";
 require_once "Ennemis/Dragon.php";
 require_once "Ennemis/BlackWizard.php";
 require_once "Ennemis/Gobelin.php";
 
 class Salle
 {
-    private $monstre;
+    private $ennemy;
     private $coffre;
     private $event;
+    private $number;
 
     public function __construct($number)
     {
         $this->number = $number;
         $this->coffre = new Coffre();
         $rand = rand(1, 3);
+
         switch ($rand) {
             case 1:
-                $this->monstre = new Dragon();
+                $this->ennemy = new Dragon($number);
                 break;
             case 2:
-                $this->monstre = new BlackWizard();
-
+                $this->ennemy = new BlackWizard($number);
                 break;
             case 3:
-                $this->monstre = new Gobelin();
-
+                $this->ennemy = new Gobelin($number);
                 break;
         }
 
-        $rand2 = rand(1, 4);
+        $rand2 = rand(1, 3);
         switch ($rand2) {
             case 1:
                 $this->evenement = "La voie est libre.";
                 break;
             case 2:
-                $this->evenement = "Un monstre " . $this->getMonstre()->getName() . " est apparu.";
+                $this->evenement = "Un " . $this->getEnnemy()->getName() . " est apparu.";
                 break;
             case 3:
-                $this->evenement = "Il y a un coffre devant vous.";
-                break;
-            case 4:
-                $this->evenement = "Il y a une porte devant vous.";
+                $this->evenement = "Un coffre se trouve au milieu de la salle.";
                 break;
         }
     }
 
-    public function getMonstre()
+    public function getEnnemy()
     {
-        return $this->monstre;
+        return $this->ennemy;
     }
 
     public function getEvent()
@@ -64,7 +62,8 @@ class Salle
         $this->event = $new;
     }
 
-    public function getCoffre(){
+    public function getCoffre()
+    {
         return $this->coffre;
     }
 }
