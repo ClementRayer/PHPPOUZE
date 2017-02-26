@@ -49,5 +49,8 @@ class Character
 
     public function lessLife($lesslife){
         $this->life -= $lesslife;
+        if($this->life <= 0){
+            header("Location: lost.php");
+        }
     }
 }
