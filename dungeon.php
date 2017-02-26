@@ -25,6 +25,7 @@ if ($_POST['etat'] == false) {
             $game->newCharacter($classe_joueur, $inputname);
 
             $game->initNumber($number);
+            $number = $game->getNumber();
 
             $_SESSION['game'] = serialize($game);
             break;
@@ -34,6 +35,7 @@ if ($_POST['etat'] == false) {
             $game = unserialize($_SESSION['game']);
 
             $game->nextNumber($number);
+            $number = $game->getNumber();
 
             $_SESSION['game'] = serialize($game);
             break;
@@ -63,7 +65,7 @@ if ($rand <= 5){
         <?php
         }
         ?>
-        <h1>Vous entrez dans la salle n°<?php echo $game->getNumber(); ?></h1>
+        <h1>Vous entrez dans la salle n°<?php echo $number; ?></h1>
         <section class="img-hero">
             <h2 class="chara"><?php echo $game->getCharacter()->getInputName(); ?></h2>
             <img id="hero" src="<?php echo $game->getCharacter()->getInputImage(); ?>" alt="hero">
@@ -77,9 +79,16 @@ if ($rand <= 5){
         <form method="post" action="stats.php">
             <input type="submit" value="Statistiques">
         </form>
-        <form method="post" action="lache.php">
+        <?php
+        if($number > 1){
+        ?>
+        <form method="post" action="dungeon.php">
+            <input type="hidden" name="etat" value="fuir">
             <input type="submit" value="Fuir">
         </form>
+        <?php
+        }
+        ?>
         <form method="post" action="index.php">
             <input type="hidden" name="etat" value="save">
             <input type="submit" value="Quitter">
