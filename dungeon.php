@@ -2,9 +2,6 @@
 
 session_start();
 
-error_reporting(E_ALL);
-ini_set("display_errors", 1);
-
 require_once 'class/Game.php';
 require_once 'class/Salle.php';
 
@@ -96,16 +93,40 @@ if ($rand <= 5){
             echo $game->getSalle()->getEvent();
         ?><br>
         <br>
+        <?php
+        switch ($game->getSalle()->getEvent()) {
+            case "La voie est libre.":
+        ?>
         <form method="post" action="dungeon.php">
             <input type="hidden" name="etat" value="next">
             <input type="submit" value="Suivant">
         </form>
-        <form method="post" action="stats.php">
-            <input type="submit" value="Statistiques">
+        <?php
+                break;
+            case "Un coffre se trouve au milieu de la salle.":
+        ?>
+            <form method="post" action="#">
+                <input type="hidden" name="etat" value="next">
+                <input type="submit" value="Ouvrir">
+            </form>
+        <?php
+                break;
+            case "Un " . $game->getSalle()->getEnnemy()->getName() . " est apparu.":
+        ?>
+        <img id="ennemy" src="<?php echo $game->getSalle()->getEnnemy()->getImg(); ?>" alt="ennemy">
+        <form method="post" action="#">
+            <input type="hidden" name="etat" value="next">
+            <input type="submit" value="Combattre">
         </form>
+        <?php
+            }
+        ?>
         <?php
         if($game->getNumber() > 1){
         ?>
+        <form method="post" action="stats.php">
+            <input type="submit" value="Statistiques">
+        </form>
         <form method="post" action="dungeon.php">
             <input type="hidden" name="etat" value="fuir">
             <input type="submit" value="Fuir">

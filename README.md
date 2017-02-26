@@ -3,5 +3,12 @@ Depuis l'index, lancer le jeu pour accéder à la création de personnage, ensui
 Au fil de votre aventure, vos statistiques augmenteront, vous pourrez les constater dans l'onglet statistiques du jeu.
 Le niveau des ennemis que vous pourrez croiser aléatoirement augmenteront afin de corser votre aventure.
 
-Dans la pratique toutes les classes sont créés, nous avons été bloqué lors du chargement de l'évènement aléatoire. Toutefois, la fuite marche (recule d'une salle + 10HP perdu), la création également le tout en session.
-C'est frustrant parce qu'on a compris.
+Dans la pratique toutes les classes sont créés, mais nous avons été bloqué lors du chargement du coffre. Toutefois, la fuite marche (recule d'une salle + 10HP perdu), la création également le tout en session.
+La génération de monstres (adaptée au level) fonctionne, de même que celle des événements aléatoires. Le coffre se génère, mais ne s'affiche.
+
+Pour résumer, il nous manque l'ouverture du coffre et le combat en lui-même.
+
+
+            Thomas PERICOI
+            Clément RAYER
+            Julien SALLIOT

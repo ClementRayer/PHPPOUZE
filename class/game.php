@@ -55,5 +55,6 @@ class Game
     public function flee(){
         $this->number = $this->number - 1;
         $this->character->lessLife(10);
+        $this->salle = new Salle($this->number);
     }
 }

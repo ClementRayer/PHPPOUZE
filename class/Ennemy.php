@@ -9,10 +9,10 @@ class Ennemi
     private $atk;
     private $img;
 
-    public function __construct($name, $number, $def, $atk, $img)
+    public function __construct($name, $life, $magie, $def, $atk, $img)
     {
         $this->name = $name;
-        $this->number = $number;
+        $this->magie = $magie;
         $this->life = 7 + (12 * $number);
         $this->def = $def + (7 * $this->number);
         $this->atk = $atk + (7 * $this->number);
