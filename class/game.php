@@ -39,7 +39,7 @@ class Game
 
     public function nextNumber(){
         $this->number = $this->number + 1;
-        $this->salle = new Salle($this->niveau);
+        $this->salle = new Salle($this->number);
     }
 
     public function getNumber(){
