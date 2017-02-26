@@ -18,7 +18,7 @@ $game = unserialize($_SESSION['game']);
 </head>
 
 <body>
-<section class="start">
+<section class="stat">
     <section class="text-place">
         <h1 class="flottement">Statistiques :</h1>
             Nom : <?php echo $game->getCharacter()->getInputName(); ?><br>

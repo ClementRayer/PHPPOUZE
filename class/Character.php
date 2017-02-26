@@ -43,14 +43,26 @@ class Character
         return $this->img;
     }
 
-    public function addLife($extralife){
-        $this->life += $extralife;
+    public function addLife($life){
+        $this->life += $life;
     }
 
-    public function lessLife($lesslife){
-        $this->life -= $lesslife;
+    public function lessLife($life){
+        $this->life -= $life;
         if($this->life <= 0){
             header("Location: lost.php");
         }
+    }
+
+    public function addAtk($atk){
+        $this->atk += $atk;
+    }
+
+    public function addDef($def){
+        $this->def += $def;
+    }
+
+    public function addMagie($mag){
+        $this->magic += $mag;
     }
 }
