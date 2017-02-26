@@ -80,6 +80,9 @@ if ($rand <= 5){
         <form method="post" action="stats.php">
             <input type="submit" value="Statistiques">
         </form>
+        <form method="post" action="lache.php">
+            <input type="submit" value="Fuir">
+        </form>
         <form method="post" action="index.php">
             <input type="hidden" name="etat" value="save">
             <input type="submit" value="Quitter">
