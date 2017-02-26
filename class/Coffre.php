@@ -11,7 +11,7 @@ class Coffre {
 
     public function genererContenu(){
 
-        $this->contenu = rand(1,5);
+        $this->contenu = rand(1,4);
         switch ($this->contenu) {
             case 1:
                 $this->character->addLife(10);
@@ -24,9 +24,6 @@ class Coffre {
                 break;
             case 4:
                 $this->character->addMagie();
-                break;
-            case 5:
-                $this->character->addDef();
                 break;
         }
 

@@ -58,10 +58,6 @@ class Character
         $this->atk += $atk;
     }
 
-    public function addDef($def){
-        $this->def += $def;
-    }
-
     public function addMagie($mag){
         $this->magic += $mag;
     }
