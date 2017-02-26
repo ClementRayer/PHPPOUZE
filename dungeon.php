@@ -79,7 +79,7 @@ if ($rand <= 5){
         <section class="img-hero">
             <h2 class="chara"><?php echo $game->getCharacter()->getInputName(); ?></h2>
             <img id="hero" src="<?php echo $game->getCharacter()->getInputImage(); ?>" alt="hero">
-            <h3><?php echo $game->getCharacter()->getInputLife(); ?></h3>
+            <h3><?php echo $game->getCharacter()->getInputLife(); ?>/100</h3>
         </section>
         <br>
         <form method="post" action="dungeon.php">
