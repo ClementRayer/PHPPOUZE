@@ -26,7 +26,9 @@ $game = unserialize($_SESSION['game']);
             Attaque : <?php echo $game->getCharacter()->getInputAtk(); ?><br>
             Defense : <?php echo $game->getCharacter()->getInputDef(); ?><br>
             Magie : <?php echo $game->getCharacter()->getInputMag(); ?><br>
+        <section class="img-hero">
             <img id="hero" src="<?php echo $game->getCharacter()->getInputImage(); ?>" alt="hero"><br>
+        </section>
         <a href="dungeon.php">Retour au jeu</a>
     </section>
 </section>
