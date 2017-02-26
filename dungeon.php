@@ -111,7 +111,7 @@ if ($rand <= 5){
         }
         ?>
         <?php
-            $game->get
+            $game->getNumber()->getEvent();
         ?>
         <form method="post" action="index.php">
             <input type="hidden" name="etat" value="save">

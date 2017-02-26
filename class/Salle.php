@@ -36,13 +36,13 @@ class Salle
         $rand2 = rand(1, 3);
         switch ($rand2) {
             case 1:
-                $this->evenement = "La voie est libre.";
+                $this->event = "La voie est libre.";
                 break;
             case 2:
-                $this->evenement = "Un " . $this->getEnnemy()->getName() . " est apparu.";
+                $this->event = "Un " . $this->getEnnemy()->getName() . " est apparu.";
                 break;
             case 3:
-                $this->evenement = "Un coffre se trouve au milieu de la salle.";
+                $this->event = "Un coffre se trouve au milieu de la salle.";
                 break;
         }
     }
