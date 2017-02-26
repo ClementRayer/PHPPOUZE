@@ -1,15 +1,20 @@
 <?php
 
 session_start();
-/*error_reporting(E_ALL);
-ini_set("display_errors", 1);*/
+error_reporting(E_ALL);
+ini_set("display_errors", 1);
 
 require_once 'class/Game.php';
 require_once 'class/Salle.php';
 
 if ($_POST['etat'] == false) {
 
+    //BEGINNING
     $game = unserialize($_SESSION['game']);
+
+    //VAR
+    $number = $game->getNumber();
+    $life = $game->getCharacter()->getInputLife();
 
 } else {
 
@@ -24,29 +29,34 @@ if ($_POST['etat'] == false) {
 
             $game->newCharacter($classe_joueur, $inputname);
 
-            $game->initNumber($number);
-            $number = $game->getNumber();
 
+            $game->initNumber();
+
+            //END
             $_SESSION['game'] = serialize($game);
             break;
 
         case "next":
 
+            //BEGINNING
             $game = unserialize($_SESSION['game']);
 
+            //METHOD
             $game->nextNumber();
-            $number = $game->getNumber();
 
+            //END
             $_SESSION['game'] = serialize($game);
             break;
 
         case "fuir":
 
+            //BEGINNING
             $game = unserialize($_SESSION['game']);
 
+            //METHOD
             $game->flee();
-            $number = $game->getNumber();
 
+            //END
             $_SESSION['game'] = serialize($game);
             break;
     }
@@ -75,11 +85,11 @@ if ($rand <= 5){
         <?php
         }
         ?>
-        <h1>Vous entrez dans la salle n°<?php echo $number; ?></h1>
+        <h1>Vous entrez dans la salle n°<?php echo $game->getNumber(); ?></h1>
         <section class="img-hero">
             <h2 class="chara"><?php echo $game->getCharacter()->getInputName(); ?></h2>
             <img id="hero" src="<?php echo $game->getCharacter()->getInputImage(); ?>" alt="hero">
-            <h3><?php echo $game->getCharacter()->getInputLife(); ?>/100</h3>
+            <h3><?php echo $game->getCharacter()->getInputLife();; ?>/100</h3>
         </section>
         <br>
         <form method="post" action="dungeon.php">
@@ -90,7 +100,7 @@ if ($rand <= 5){
             <input type="submit" value="Statistiques">
         </form>
         <?php
-        if($number > 1){
+        if($game->getNumber() > 1){
         ?>
         <form method="post" action="dungeon.php">
             <input type="hidden" name="etat" value="fuir">

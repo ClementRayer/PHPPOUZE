@@ -33,11 +33,11 @@ class Game
         return $this->character;
     }
 
-    public function initNumber($number){
+    public function initNumber(){
         $this->number = 1;
     }
 
-    public function nextNumber($number){
+    public function nextNumber(){
             $this->number = $this->number + 1;
     }
 
@@ -47,5 +47,6 @@ class Game
 
     public function flee(){
         $this->number = $this->number - 1;
+        $this->character->lessLife(10);
     }
 }

@@ -42,4 +42,12 @@ class Character
     public function getInputImage() {
         return $this->img;
     }
+
+    public function addLife($extralife){
+        $this->life += $extralife;
+    }
+
+    public function lessLife($lesslife){
+        $this->life -= $lesslife;
+    }
 }

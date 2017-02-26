@@ -6,5 +6,4 @@ require_once 'Game.php';
 
 class Salle
 {
-
 }
