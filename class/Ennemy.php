@@ -12,8 +12,8 @@ class Ennemi
     public function __construct($name, $number, $def, $atk, $img)
     {
         $this->name = $name;
-        $this->number = $niveau;
-        $this->life = 7 + (12 * $niveau);
+        $this->number = $number;
+        $this->life = 7 + (12 * $number);
         $this->def = $def + (7 * $this->number);
         $this->atk = $atk + (7 * $this->number);
         $this->img = $img;

@@ -36,12 +36,12 @@ class Game
 
     public function initNumber(){
         $this->number = 1;
-        //$this->salle = new Salle($this->number);
+        $this->salle = new Salle($this->number);
     }
 
     public function nextNumber(){
         $this->number = $this->number + 1;
-        //$this->salle = new Salle($this->number);
+        $this->salle = new Salle($this->number);
     }
 
     public function getSalle(){

@@ -18,7 +18,7 @@ class Salle
     public function __construct($number)
     {
         $this->number = $number;
-        $this->coffre = new Coffre();
+        /*$this->coffre = new Coffre();*/
         $rand = rand(1, 3);
 
         switch ($rand) {
@@ -52,10 +52,10 @@ class Salle
         return $this->ennemy;
     }
 
-    /*public function getEvent()
+    public function getEvent()
     {
         return $this->event;
-    }*/
+    }
 
     public function setEvent($new)
     {

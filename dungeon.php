@@ -92,6 +92,9 @@ if ($rand <= 5){
             <img id="hero" src="<?php echo $game->getCharacter()->getInputImage(); ?>" alt="hero">
             <h3><?php echo $game->getCharacter()->getInputLife();; ?>/100</h3>
         </section>
+        <?php
+            echo $game->getSalle()->getEvent();
+        ?><br>
         <br>
         <form method="post" action="dungeon.php">
             <input type="hidden" name="etat" value="next">
