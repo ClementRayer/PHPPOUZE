@@ -5,27 +5,37 @@ error_reporting(E_ALL);
 ini_set("display_errors", 1);
 
 require_once 'class/Game.php';
+require_once 'class/Salle.php';
 
-if ($_POST['etat'] == "personnage") {
+if ($_POST['etat'] == false) {
 
-    $game = new Game();
-
-    $inputname = $_POST['inputname'];
-    $classe_joueur = $_POST['classe'];
-
-    $game->newCharacter($classe_joueur, $inputname);
-
-    $_SESSION['game'] = serialize($game);
-}
-
-elseif (isset($_SESSION['game'])){
     $game = unserialize($_SESSION['game']);
-}
 
-else{
-    header('Location:index.php');
-}
+} else {
 
+    switch ($_POST['etat']) {
+
+        case "personnage":
+
+            $number = 1;
+
+            $game = new Game();
+
+            $inputname = $_POST['inputname'];
+            $classe_joueur = $_POST['classe'];
+
+            $game->newCharacter($classe_joueur, $inputname);
+
+            $_SESSION['game'] = serialize($game);
+            break;
+
+        case "next":
+
+            $number->addNumber($number);
+            $_SESSION['game'] = serialize($game);
+            break;
+    }
+}
 ?>
 
 <!doctype html>
@@ -38,41 +48,35 @@ else{
 
 <body>
 <?php
-    $rand = rand(1, 10);
-    if ($rand <= 5){
+$rand = rand(1, 10);
+if ($rand <= 5){
 ?>
 <section class="dungeon1">
     <?php
     }
     elseif ($rand <= 10 & $rand > 5){
     ?>
-<section class="dungeon2">
-    <?php
-    }
-    ?>
-        <h1>Vous entrez dans la salle n°<?php ?>></h1>
+    <section class="dungeon2">
+        <?php
+        }
+        ?>
+        <h1>Vous entrez dans la salle n°<?php echo $number ?></h1>
         <section class="img-hero">
-            <h2 class="chara"><?php echo $game->getCharacter()->getInputName();?></h2>
+            <h2 class="chara"><?php echo $game->getCharacter()->getInputName(); ?></h2>
             <img id="hero" src="<?php echo $game->getCharacter()->getInputImage(); ?>" alt="hero">
-            <h3><?php echo $game->getCharacter()->getInputLife();?></h3>
+            <h3><?php echo $game->getCharacter()->getInputLife(); ?></h3>
         </section>
-        <!--<section class="options">
-            <ul>
-                <li>Observer</li>
-                <li>Passer la porte</li>
-                <li>Ouvrir le coffre</li>
-                <li>Attaquer <?php ?></li>
-                <li>Fuir</li>
-            </ul>
-        </section>
-    </section>-->
-    <br>
-    <form method="post" action="index.php">
-        <input type="hidden" name="etat" value="quitter">
-        <input type="submit" value="Quitter la session">
-    </form>
+        <br>
+        <form method="post" action="dungeon.php">
+            <input type="hidden" name="etat" value="next">
+            <input type="submit" value="Suivant">
+        </form>
+        <form method="post" action="index.php">
+            <input type="hidden" name="etat" value="quitter">
+            <input type="submit" value="Quitter la session">
+        </form>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="./js/main.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="./js/main.js"></script>
 </body>
 </html>
