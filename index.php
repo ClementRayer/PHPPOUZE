@@ -21,7 +21,12 @@ if ($_POST['etat'] == "quitter") {
     <section class="text-place">
         <img class="flottement" src="./img/logo.png" alt="logo">
         <br><br>
-        <a class="clignotement" href="enter.php">Start</a>
+        <a class="clignotement" href="enter.php">Start</a><br><br>
+        <?php
+            if ($_POST['etat'] == "save") {
+                ?><a class="clignotement" href="dungeon.php">Reprendre</a><?php
+            }
+        ?>
     </section>
 </section>
 
