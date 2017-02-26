@@ -10,7 +10,6 @@ require_once 'class/Salle.php';
 if ($_POST['etat'] == false) {
 
     $game = unserialize($_SESSION['game']);
-    $number = unserialize($_SESSION['number']);
 
 } else {
 
@@ -22,23 +21,21 @@ if ($_POST['etat'] == false) {
 
             $inputname = $_POST['inputname'];
             $classe_joueur = $_POST['classe'];
-            $number = $_POST['number'];
 
             $game->newCharacter($classe_joueur, $inputname);
 
+            $game->initNumber($number);
+
             $_SESSION['game'] = serialize($game);
-            $_SESSION['number'] = serialize($number);
             break;
 
         case "next":
 
             $game = unserialize($_SESSION['game']);
-            $number = unserialize($_SESSION['number']);
 
-            $number = $number + 1;
+            $game->nextNumber($number);
 
             $_SESSION['game'] = serialize($game);
-            $_SESSION['number'] = serialize($number);
             break;
     }
 }
@@ -66,7 +63,7 @@ if ($rand <= 5){
         <?php
         }
         ?>
-        <h1>Vous entrez dans la salle n°<?php echo $number; ?></h1>
+        <h1>Vous entrez dans la salle n°<?php echo $game->getNumber(); ?></h1>
         <section class="img-hero">
             <h2 class="chara"><?php echo $game->getCharacter()->getInputName(); ?></h2>
             <img id="hero" src="<?php echo $game->getCharacter()->getInputImage(); ?>" alt="hero">

@@ -32,4 +32,16 @@ class Game
     public function getCharacter(){
         return $this->character;
     }
+
+    public function initNumber($number){
+        $this->number = 1;
+    }
+
+    public function nextNumber($number){
+            $this->number = $number + 1;
+    }
+
+    public function getNumber(){
+        return $this->number;
+    }
 }

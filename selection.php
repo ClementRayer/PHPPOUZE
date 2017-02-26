@@ -26,7 +26,6 @@ session_start();
             <label>
                 <input type="checkbox" class="radio" value="2" name="classe"/>&nbsp;Paladin</label><br><br>
                 <input type="hidden" name="etat" value="personnage">
-                <input type="hidden" name="number" value="1">
             <input type="submit" value="Envoyer">
         </form>
     </section>
