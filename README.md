@@ -1,0 +1,1 @@
+Le jeu contient un module de création de personnage.
